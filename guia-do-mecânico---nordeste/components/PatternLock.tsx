@@ -136,7 +136,7 @@ const PatternLock: React.FC<PatternLockProps> = ({ onSuccess }) => {
               <Lock size={16} className="mr-2" />
               <span>Área Restrita</span>
             </div>
-            <span className="text-xs text-gray-400">Desenhe o "U" (Esq -> Dir) para liberar</span>
+            <span className="text-xs text-gray-400">Desenhe o "U" (Esq &rarr; Dir) para liberar</span>
           </div>
         )}
       </div>

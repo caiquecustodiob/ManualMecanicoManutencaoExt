@@ -11,19 +11,19 @@ const SecureDocuments: React.FC = () => {
       id: 1,
       name: 'CRLV - HONDA CG 125I FAN (2018)',
       plate: 'PNK6G03',
-      file: 'documentos/PNK6G03.pdf'
+      file: 'https://github.com/caiquecustodiob/ManualMecanicoManutencaoExt/raw/d75269bbd134a790f43e4a9f40389416a6740439/guia-do-mec%C3%A2nico---nordeste/documentos/CRLVDigital_PNK6G03_2025.pdf'
     },
     {
       id: 2,
       name: 'CRLV - HONDA CG 160 START (2019)',
       plate: 'POC8G33',
-      file: 'documentos/POC8G33.pdf'
+      file: 'https://github.com/caiquecustodiob/ManualMecanicoManutencaoExt/raw/d75269bbd134a790f43e4a9f40389416a6740439/guia-do-mec%C3%A2nico---nordeste/documentos/CRLVDigital_POC8G33_2025-1.pdf'
     },
     {
       id: 3,
       name: 'CRLV - HONDA CG 160 CARGO (2024)',
       plate: 'SBI6D12',
-      file: 'documentos/SBI6D12.pdf'
+      file: 'https://github.com/caiquecustodiob/ManualMecanicoManutencaoExt/raw/d75269bbd134a790f43e4a9f40389416a6740439/guia-do-mec%C3%A2nico---nordeste/documentos/CRLVDigital_SBI6D12_2025.pdf'
     }
   ];
 
@@ -46,7 +46,8 @@ const SecureDocuments: React.FC = () => {
           <a
             key={doc.id}
             href={doc.file}
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-md transition-colors group border-b last:border-0 border-gray-50"
           >
             <div className="flex items-center">
@@ -63,7 +64,7 @@ const SecureDocuments: React.FC = () => {
         ))}
       </div>
       <div className="bg-gray-50 p-2 text-center text-xs text-gray-400 border-t border-gray-100">
-        Toque no arquivo para baixar
+        Toque no arquivo para visualizar/baixar
       </div>
     </div>
   );

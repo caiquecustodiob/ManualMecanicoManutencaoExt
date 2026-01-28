@@ -1,14 +1,15 @@
 import React from 'react';
-import { Calendar, CheckCircle2, Circle } from 'lucide-react';
+import { Calendar, CheckCircle2, Circle, Award } from 'lucide-react';
 import { Phase } from '../types';
 
 interface PhaseCardProps {
   phase: Phase;
   isCompleted: boolean;
   onToggle: () => void;
+  onGenerateCert: (phase: Phase) => void;
 }
 
-const PhaseCard: React.FC<PhaseCardProps> = ({ phase, isCompleted, onToggle }) => {
+const PhaseCard: React.FC<PhaseCardProps> = ({ phase, isCompleted, onToggle, onGenerateCert }) => {
   return (
     <div className={`relative overflow-hidden rounded-xl border transition-all duration-300 ${isCompleted ? 'bg-red-50 border-red-200' : 'bg-white border-gray-200 shadow-sm'}`}>
       <div className="p-5">
@@ -49,6 +50,18 @@ const PhaseCard: React.FC<PhaseCardProps> = ({ phase, isCompleted, onToggle }) =
                 </div>
             ))}
         </div>
+
+        {isCompleted && (
+            <div className="mt-4 pt-4 border-t border-red-200 flex justify-end">
+                <button 
+                    onClick={() => onGenerateCert(phase)}
+                    className="flex items-center space-x-2 text-xs font-bold text-nordeste-red hover:text-red-800 bg-white px-3 py-1.5 rounded border border-red-200 shadow-sm"
+                >
+                    <Award className="w-4 h-4" />
+                    <span>CERTIFICADO</span>
+                </button>
+            </div>
+        )}
       </div>
       {isCompleted && (
           <div className="absolute bottom-0 left-0 w-full h-1 bg-nordeste-red"></div>

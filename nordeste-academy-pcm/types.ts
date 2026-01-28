@@ -25,3 +25,9 @@ export type TabType = 'cronograma' | 'modulos' | 'ativos';
 export interface ProgressState {
   [key: string]: boolean;
 }
+
+export interface UserProfile {
+  name: string;
+  role: string;
+  startDate: string;
+}

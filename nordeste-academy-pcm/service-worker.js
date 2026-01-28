@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nordeste-pcm-v1.1'; // Increment version to force cache refresh
+const CACHE_NAME = 'nordeste-pcm-v1.2'; // Version bump
 const STATIC_ASSETS = [
   './',
   './index.html',
@@ -11,6 +11,9 @@ const EXTERNAL_ASSETS = [
   'https://esm.sh/react@^19.2.4',
   'https://esm.sh/react-dom@^19.2.4/',
   'https://esm.sh/lucide-react@^0.563.0',
+  // Cache the new PNG icons required for PWA install
+  'https://placehold.co/192x192/dc2626/ffffff.png?text=PCM&font=roboto',
+  'https://placehold.co/512x512/dc2626/ffffff.png?text=PCM&font=roboto'
 ];
 
 self.addEventListener('install', (event) => {
@@ -39,7 +42,6 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   // Strategy: Cache First, falling back to Network
-  // Ideally for PWA shell and static assets
   event.respondWith(
     caches.match(event.request).then((response) => {
       if (response) {
@@ -59,7 +61,6 @@ self.addEventListener('fetch', (event) => {
 
         return networkResponse;
       }).catch(() => {
-        // Fallback logic could go here (e.g., custom offline page)
         console.log('Offline: Could not fetch resource');
       });
     })

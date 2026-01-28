@@ -2,15 +2,36 @@
   "name": "Nordeste Academy PCM",
   "short_name": "Nordeste PCM",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f3f4f6",
   "theme_color": "#dc2626",
+  "orientation": "portrait",
   "description": "Training schedule and asset management interface for PCM Assistants.",
   "icons": [
     {
-      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMDAiIGZpbGw9IiNkYzI2MjYiLz48cGF0aCBkPSJNNDAwIDE0NEwyMDggMzM2TDExMiAyNDAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNDgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "https://placehold.co/192x192/dc2626/ffffff.png?text=PCM&font=roboto",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://placehold.co/192x192/dc2626/ffffff.png?text=PCM&font=roboto",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://placehold.co/512x512/dc2626/ffffff.png?text=PCM&font=roboto",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://placehold.co/512x512/dc2626/ffffff.png?text=PCM&font=roboto",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

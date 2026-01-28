@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nordeste-pcm-v1';
+const CACHE_NAME = 'nordeste-pcm-v1.1'; // Increment version to force cache refresh
 const STATIC_ASSETS = [
   './',
   './index.html',
@@ -11,7 +11,6 @@ const EXTERNAL_ASSETS = [
   'https://esm.sh/react@^19.2.4',
   'https://esm.sh/react-dom@^19.2.4/',
   'https://esm.sh/lucide-react@^0.563.0',
-  'https://picsum.photos/32/32', // Favicon placeholder
 ];
 
 self.addEventListener('install', (event) => {
